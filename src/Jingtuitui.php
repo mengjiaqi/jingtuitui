@@ -45,10 +45,11 @@ class Jingtuitui
     $response = $this->http->get('get_goods_info', ['query' => [
       'appid' => $this->appid,
       'appkey' => $this->appkey,
-      'sku' => $sku
+      'gid' => $sku
     ]]);
 
-    return $response->getBody();
+    $return = json_decode($response->getBody());
+    return $return->result;
   }
 
   /**
@@ -67,6 +68,7 @@ class Jingtuitui
       'sku' => urlencode($url)
     ]]);
 
-    return $response->getBody();
+    $return = json_decode($response->getBody());
+    return $return->result;
   }
 }
