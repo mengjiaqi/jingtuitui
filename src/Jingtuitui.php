@@ -27,7 +27,7 @@ class Jingtuitui
     $this->appkey = $appkey;
 
     $this->http = new Client([
-      'base_url' => 'http://japi.jingtuitui.com/api'
+      'base_uri' => 'http://japi.jingtuitui.com/api/'
     ]);
   }
 
