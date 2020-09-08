@@ -42,7 +42,7 @@ class Jingtuitui
    */
   public function get_goods_info($sku)
   {
-    $response = $this->http->get('get_goods_info', ['query' => [
+    $response = $this->http->post('get_goods_info', ['query' => [
       'appid' => $this->appid,
       'appkey' => $this->appkey,
       'gid' => $sku
@@ -59,9 +59,9 @@ class Jingtuitui
    *
    * @param string $url
    */
-  public function get_coupom_info($url)
+  public function get_coupon_info($url)
   {
-    $response = $this->http->get('get_goods_info', ['query' => [
+    $response = $this->http->post('get_coupon_info', ['query' => [
       'appid' => $this->appid,
       'appkey' => $this->appkey,
       'sku' => urlencode($url)
