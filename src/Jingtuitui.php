@@ -48,8 +48,7 @@ class Jingtuitui
       'gid' => $sku
     ]]);
 
-    $return = json_decode($response->getBody());
-    return $return->result;
+    return json_decode($response->getBody());
   }
 
   /**
@@ -68,7 +67,6 @@ class Jingtuitui
       'sku' => urlencode($url)
     ]]);
 
-    $return = json_decode($response->getBody());
-    return $return->result;
+    return json_decode($response->getBody());
   }
 }
