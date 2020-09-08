@@ -64,7 +64,7 @@ class Jingtuitui
     $response = $this->http->post('get_coupon_info', ['query' => [
       'appid' => $this->appid,
       'appkey' => $this->appkey,
-      'sku' => urlencode($url)
+      'url' => urlencode($url)
     ]]);
 
     return json_decode($response->getBody());
