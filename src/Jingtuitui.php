@@ -21,7 +21,7 @@ class Jingtuitui
    */
   private $http;
 
-  public function __constuct($appid, $appkey)
+  public function __construct($appid, $appkey)
   {
     $this->appid = $appid;
     $this->appkey = $appkey;
